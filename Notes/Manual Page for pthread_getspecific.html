@@ -1,0 +1,38 @@
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"><title>Manual Page for pthread_getspecific</title><style type="text/css">.red {color: #CC0000} .hed {color: #000000; font-weight: bold; font-size: larger;}.blueBox{ background-color: #F1F5F9;padding: 6px 10px 6px 10px; border: 1px #ccc double; color: #000000; font-size: 14px}.indexLink {float:right; margin-top:4px;}</style></head><body><pre> <a href="man:PTHREAD_GETSPECIFIC.3">PTHREAD_GETSPECIFIC(3)</a>   BSD Library Functions Manual   <a href="man:PTHREAD_GETSPECIFIC.3">PTHREAD_GETSPECIFIC(3)</a>
+
+<span class="hed">NAME</span>
+     <span class="red">pthread_getspecific</span> -- get a thread-specific data value
+
+<span class="hed">SYNOPSIS</span>
+     <span class="red">#include</span> <span class="red">&lt;pthread.h&gt;</span>
+
+     <u>void</u> <u>*</u>
+     <span class="red">pthread_getspecific</span>(<u>pthread_</u><span class="red"></span><u>key_</u><span class="red"></span><u>t</u> <u>key</u>);
+
+<span class="hed">DESCRIPTION</span>
+     The <span class="red">pthread_getspecific</span>() function returns the value that is currently
+     bound to the specified <u>key</u>, on behalf of the calling thread.
+
+     The effect of calling <span class="red">pthread_getspecific</span>() with a <u>key</u> value that was not
+     obtained from <span class="red">pthread_key_create</span>(), or after a <u>key</u> has been deleted with
+     <span class="red">pthread_key_delete</span>(), is undefined.
+
+     <span class="red">pthread_getspecific</span>() may be called from a thread-specific data destruc-
+     tor function.
+
+<span class="hed">RETURN VALUES</span>
+     The <span class="red">pthread_getspecific</span>() function will return the thread-specific data
+     value associated with the given <u>key</u>.  If no thread-specific data value is
+     associated with <u>key</u>, the value NULL is returned.
+
+<span class="hed">ERRORS</span>
+     None.
+
+<span class="hed">SEE ALSO</span>
+     <a href="man:pthread_key_create.3">pthread_key_create(3)</a>, <a href="man:pthread_key_delete.3">pthread_key_delete(3)</a>, <a href="man:pthread_setspecific.3">pthread_setspecific(3)</a>
+
+<span class="hed">STANDARDS</span>
+     <span class="red">pthread_getspecific</span>() conforms to ISO/IEC 9945-1:1996 (``POSIX.1'').
+
+BSD                              April 4, 1996                             BSD
+</pre><div align="center" class="blueBox">Bwana Created by <a href="http://www.bruji.com/">Bruji</a></div></body></html> 

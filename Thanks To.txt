@@ -1,0 +1,1 @@
+This is based on struct ucontext_t and the functions getcontext, swapcontext, there is a bug in Apples implementation of ucontext_t thanks to Kittensoft for finding a work around <http://journal.kittensoft.org/2008/9/8/ucontext-broken-on-os-x-10-5-leopard>

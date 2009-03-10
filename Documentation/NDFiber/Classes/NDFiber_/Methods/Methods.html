@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><head>
+    <title>Methods</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="generator" content="HeaderDoc" />
+<style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}--></style></head><body bgcolor="#ffffff">
+<a name="top"></a>
+<a name="HeaderDoc_methods"></a>
+<dl>
+<dt><tt><a href="Methods.html#//apple_ref/occ/instm/NDFiber/continue" target="doc">-continue </a></tt></dt>
+<dd>yields the current fiber to the receiver
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/clm/NDFiber/currentFiber" target="doc">+currentFiber</a></tt></dt>
+<dd>Returns the fiber object representing the current fiber of execution.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/clm/NDFiber/detachNewFiberSelector:toTarget:withObject:" target="doc">+detachNewFiberSelector:toTarget:withObject: </a></tt></dt>
+<dd>Detaches a new fiber and uses the specified <tt><i>selector</i></tt> as the fiber entry point.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/instm/NDFiber/fiberDictionary" target="doc">-fiberDictionary </a></tt></dt>
+<dd>Returns the fiber object's dictionary.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/clm/NDFiber/fiberWithTarget:selector:object:" target="doc">+fiberWithTarget:selector:object: </a></tt></dt>
+<dd>Returns an <tt>NDFiber</tt> object initialized with the given arguments.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/instm/NDFiber/initWithTarget:selector:object:" target="doc">-initWithTarget:selector:object: </a></tt></dt>
+<dd>Returns an <tt>NDFiber</tt> object initialized with the given arguments.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/instm/NDFiber/isCurrentFiber" target="doc">-isCurrentFiber</a></tt></dt>
+<dd>Tests if the fiber is the current fiber for the current thread
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/instm/NDFiber/isExecuting" target="doc">-isExecuting</a></tt></dt>
+<dd>Returns a Boolean value that indicates whether the receiver is executing.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/instm/NDFiber/isFinished" target="doc">-isFinished </a></tt></dt>
+<dd>Returns a Boolean value that indicates whether the receiver has finished execution.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/clm/NDFiber/isMainFiber" target="doc">+isMainFiber </a></tt></dt>
+<dd>Returns a Boolean value that indicates whether the current fiber is the main fiber.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/instm/NDFiber/isMainFiber" target="doc">-isMainFiber </a></tt></dt>
+<dd>Returns a Boolean value that indicates whether the current fiber is the main fiber.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/clm/NDFiber/mainFiber" target="doc">+mainFiber</a></tt></dt>
+<dd>Returns the <tt>NDFiber</tt> object representing the main fiber.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/instm/NDFiber/name" target="doc">-name</a></tt></dt>
+<dd>Returns the name of the receiver.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/instm/NDFiber/setName:" target="doc">-setName:</a></tt></dt>
+<dd>Sets the name of the receiver.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/instm/NDFiber/setStackSize:" target="doc">-setStackSize: </a></tt></dt>
+<dd>Sets the stack size of the receiver. This value will be rounded up to the nearest multiple of 4KB.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/instm/NDFiber/stackSize" target="doc">-stackSize</a></tt></dt>
+<dd>eturns the stack size of the receiver.
+</dd>
+<dt><tt><a href="Methods.html#//apple_ref/occ/clm/NDFiber/yieldToFiber:" target="doc">+yieldToFiber: </a></tt></dt>
+<dd>Yields execution of current fiber to another fiber.
+</dd>
+</dl>
+<hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDFiber/continue;  name=NDFiber::continue -->
+<a name="//apple_ref/occ/instm/NDFiber/continue"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="continue">continue </a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->yields the current fiber to the receiver
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<span class="var">continue</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><p><!-- begin discussion -->This is the method in which the switching between fibers occurs, <tt>+[NDFiber yieldToFiber:]</tt> sends this message to its argument. If the receiver is finished then the exception <tt>NDFiberSucceedToFinishedFiberException</tt> is thrown
+<!-- end discussion --></p>
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDFiber/currentFiber;  name=NDFiber::currentFiber -->
+<a name="//apple_ref/occ/clm/NDFiber/currentFiber"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="currentFiber">currentFiber</a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Returns the fiber object representing the current fiber of execution.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/NDFiber //apple_ref/occ/tdef/NDFiber //apple_ref/occ/tag/NDFiber //apple_ref/occ/econst/NDFiber //apple_ref/occ/struct/NDFiber //apple_ref/occ/clconst/NDFiber //apple_ref/occ/intf/NDFiber" --><span class="type">NDFiber</span><!-- /a --> <span class="type">*</span>)<span class="var">currentFiber</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->A fiber object representing the current fiber of execution.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDFiber/detachNewFiberSelector:toTarget:withObject:;  name=NDFiber::detachNewFiberSelector:toTarget:withObject: -->
+<a name="//apple_ref/occ/clm/NDFiber/detachNewFiberSelector:toTarget:withObject:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="detachNewFiberSelector:toTarget:withObject:">detachNewFiberSelector:toTarget:withObject: </a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Detaches a new fiber and uses the specified <tt><i>selector</i></tt> as the fiber entry point.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/NDFiber //apple_ref/occ/tdef/NDFiber //apple_ref/occ/tag/NDFiber //apple_ref/occ/econst/NDFiber //apple_ref/occ/struct/NDFiber //apple_ref/occ/clconst/NDFiber //apple_ref/occ/intf/NDFiber" --><span class="type">NDFiber</span><!-- /a --> <span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/detachNewFiberSelector //apple_ref/occ/clm/detachNewFiberSelector //apple_ref/occ/intfcm/detachNewFiberSelector //apple_ref/occ/intfm/detachNewFiberSelector //apple_ref/occ/func/detachNewFiberSelector //apple_ref/occ/ftmplt/detachNewFiberSelector //apple_ref/occ/defn/detachNewFiberSelector //apple_ref/occ/macro/detachNewFiberSelector" --><span class="function">detachNewFiberSelector</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/SEL //apple_ref/occ/tdef/SEL //apple_ref/occ/tag/SEL //apple_ref/occ/econst/SEL //apple_ref/occ/struct/SEL //apple_ref/occ/clconst/SEL //apple_ref/occ/intf/SEL" --><span class="type">SEL</span><!-- /a -->)<span class="param">selector</span> <!-- a logicalPath="//apple_ref/occ/instm/toTarget //apple_ref/occ/clm/toTarget //apple_ref/occ/intfcm/toTarget //apple_ref/occ/intfm/toTarget //apple_ref/occ/func/toTarget //apple_ref/occ/ftmplt/toTarget //apple_ref/occ/defn/toTarget //apple_ref/occ/macro/toTarget" --><span class="function">toTarget</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<span class="param">target</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/withObject //apple_ref/occ/clm/withObject //apple_ref/occ/intfcm/withObject //apple_ref/occ/intfm/withObject //apple_ref/occ/func/withObject //apple_ref/occ/ftmplt/withObject //apple_ref/occ/defn/withObject //apple_ref/occ/macro/withObject" --><span class="function">withObject</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<span class="var">argument</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>selector </code></dt><dd>The selector for the message to send to the target. This selector must take only one argument and must not have a return value.</dd>
+<dt><code>target </code></dt><dd>The object that will receive the message aSelector on the new fiber.</dd>
+<dt><code>argument </code></dt><dd>The single argument passed to the target. May be <tt>nil</tt>.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><p><!-- begin discussion -->For non garbage-collected applications, the method <tt><i>selector</i></tt> can set up an autorelease pool for the newly detached fiber and freeing that pool before it exits, but unlike threads this is not required. Also the fiber returned is autoreleased and so you need to retain it like you retain any other object.
+The objects aTarget and anArgument are retained during the execution of the detached fiber, then released. The detached fiber is exited as soon as aTarget has completed executing the aSelector method.
+<!-- end discussion --></p>
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDFiber/fiberDictionary;  name=NDFiber::fiberDictionary -->
+<a name="//apple_ref/occ/instm/NDFiber/fiberDictionary"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="fiberDictionary">fiberDictionary </a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Returns the fiber object's dictionary.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSMutableDictionary //apple_ref/occ/tdef/NSMutableDictionary //apple_ref/occ/tag/NSMutableDictionary //apple_ref/occ/econst/NSMutableDictionary //apple_ref/occ/struct/NSMutableDictionary //apple_ref/occ/clconst/NSMutableDictionary //apple_ref/occ/intf/NSMutableDictionary" --><span class="type">NSMutableDictionary</span><!-- /a --> <span class="type">*</span>)<span class="var">fiberDictionary</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->The fiber object's dictionary.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><p><!-- begin discussion -->You can use the returned dictionary to store fiber-specific data. The fiber dictionary is not used during any manipulations of the <tt>NDFiber</tt> object—it is simply a place where you can store any interesting data. You may define your own keys for the dictionary.
+<!-- end discussion --></p>
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDFiber/fiberWithTarget:selector:object:;  name=NDFiber::fiberWithTarget:selector:object: -->
+<a name="//apple_ref/occ/clm/NDFiber/fiberWithTarget:selector:object:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="fiberWithTarget:selector:object:">fiberWithTarget:selector:object: </a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Returns an <tt>NDFiber</tt> object initialized with the given arguments.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/fiberWithTarget //apple_ref/occ/clm/fiberWithTarget //apple_ref/occ/intfcm/fiberWithTarget //apple_ref/occ/intfm/fiberWithTarget //apple_ref/occ/func/fiberWithTarget //apple_ref/occ/ftmplt/fiberWithTarget //apple_ref/occ/defn/fiberWithTarget //apple_ref/occ/macro/fiberWithTarget" --><span class="function">fiberWithTarget</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<span class="param">target</span> <!-- a logicalPath="//apple_ref/occ/instm/selector //apple_ref/occ/clm/selector //apple_ref/occ/intfcm/selector //apple_ref/occ/intfm/selector //apple_ref/occ/func/selector //apple_ref/occ/ftmplt/selector //apple_ref/occ/defn/selector //apple_ref/occ/macro/selector" --><span class="function">selector</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/SEL //apple_ref/occ/tdef/SEL //apple_ref/occ/tag/SEL //apple_ref/occ/econst/SEL //apple_ref/occ/struct/SEL //apple_ref/occ/clconst/SEL //apple_ref/occ/intf/SEL" --><span class="type">SEL</span><!-- /a -->)<span class="param">selector</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/object //apple_ref/occ/clm/object //apple_ref/occ/intfcm/object //apple_ref/occ/intfm/object //apple_ref/occ/func/object //apple_ref/occ/ftmplt/object //apple_ref/occ/defn/object //apple_ref/occ/macro/object" --><span class="function">object</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<span class="var">argument</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>target </code></dt><dd>The object to which the message specified by <tt><i>selector</i></tt> is sent.</dd>
+<dt><code>selector </code></dt><dd>The selector for the message to send to target. This selector must take only one argument and must not have a return value.</dd>
+<dt><code>argument </code></dt><dd>The single argument passed to the target. May be <tt>nil</tt>.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An autoreleased <tt>NDFiber</tt> object initialized with the given arguments.
+ 
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><p><!-- begin discussion -->For non garbage-collected applications, the method aSelector can set up an autorelease pool for the newly detached fiber and freeing that pool before it exits, but unlike threads this is not required. Also the fiber returned is autoreleased and so you need to retain it like you retain any other object.
+The objects aTarget and anArgument are retained during the execution of the detached fiber, then released. The detached fiber is exited as soon as aTarget has completed executing the aSelector method.
+<!-- end discussion --></p>
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDFiber/initWithTarget:selector:object:;  name=NDFiber::initWithTarget:selector:object: -->
+<a name="//apple_ref/occ/instm/NDFiber/initWithTarget:selector:object:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="initWithTarget:selector:object:">initWithTarget:selector:object: </a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Returns an <tt>NDFiber</tt> object initialized with the given arguments.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/initWithTarget //apple_ref/occ/clm/initWithTarget //apple_ref/occ/intfcm/initWithTarget //apple_ref/occ/intfm/initWithTarget //apple_ref/occ/func/initWithTarget //apple_ref/occ/ftmplt/initWithTarget //apple_ref/occ/defn/initWithTarget //apple_ref/occ/macro/initWithTarget" --><span class="function">initWithTarget</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<span class="param">target</span> <!-- a logicalPath="//apple_ref/occ/instm/selector //apple_ref/occ/clm/selector //apple_ref/occ/intfcm/selector //apple_ref/occ/intfm/selector //apple_ref/occ/func/selector //apple_ref/occ/ftmplt/selector //apple_ref/occ/defn/selector //apple_ref/occ/macro/selector" --><span class="function">selector</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/SEL //apple_ref/occ/tdef/SEL //apple_ref/occ/tag/SEL //apple_ref/occ/econst/SEL //apple_ref/occ/struct/SEL //apple_ref/occ/clconst/SEL //apple_ref/occ/intf/SEL" --><span class="type">SEL</span><!-- /a -->)<span class="param">selector</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/object //apple_ref/occ/clm/object //apple_ref/occ/intfcm/object //apple_ref/occ/intfm/object //apple_ref/occ/func/object //apple_ref/occ/ftmplt/object //apple_ref/occ/defn/object //apple_ref/occ/macro/object" --><span class="function">object</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<span class="var">argument</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>target </code></dt><dd>The object to which the message specified by <tt><i>selector</i></tt> is sent.</dd>
+<dt><code>selector </code></dt><dd>The selector for the message to send to target. This selector must take only one argument and must not have a return value.</dd>
+<dt><code>argument </code></dt><dd>The single argument passed to the target. May be <tt>nil</tt>.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An <tt>NDFiber</tt> object initialized with the given arguments.
+ 
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><p><!-- begin discussion -->For non garbage-collected applications, the method aSelector can set up an autorelease pool for the newly detached fiber and freeing that pool before it exits, but unlike threads this is not required.
+The objects aTarget and anArgument are retained during the execution of the detached fiber, then released. The detached fiber is exited as soon as aTarget has completed executing the aSelector method.
+<!-- end discussion --></p>
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDFiber/isCurrentFiber;  name=NDFiber::isCurrentFiber -->
+<a name="//apple_ref/occ/instm/NDFiber/isCurrentFiber"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="isCurrentFiber">isCurrentFiber</a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Tests if the fiber is the current fiber for the current thread
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<span class="var">isCurrentFiber</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns <tt>YES</tt> if the receiver is equal to <tt>+[NDFiber currentFiber]</tt> otherwise <tt>NO</tt>
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDFiber/isExecuting;  name=NDFiber::isExecuting -->
+<a name="//apple_ref/occ/instm/NDFiber/isExecuting"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="isExecuting">isExecuting</a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Returns a Boolean value that indicates whether the receiver is executing.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<span class="var">isExecuting</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->YES if the receiver is executing, otherwise NO.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDFiber/isFinished;  name=NDFiber::isFinished -->
+<a name="//apple_ref/occ/instm/NDFiber/isFinished"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="isFinished">isFinished </a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Returns a Boolean value that indicates whether the receiver has finished execution.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<span class="var">isFinished</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->YES if the receiver has finished execution, otherwise NO.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><p><!-- begin discussion -->Trying to <tt>continue</tt> or yeild to a finished fiber will throw an <tt>NDFiberSucceedToFinishedFiberException</tt> exception.
+<!-- end discussion --></p>
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDFiber/isMainFiber;  name=NDFiber::isMainFiber -->
+<a name="//apple_ref/occ/clm/NDFiber/isMainFiber"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="isMainFiber">isMainFiber </a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Returns a Boolean value that indicates whether the current fiber is the main fiber.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<span class="var">isMainFiber</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->YES if the current fiber is the main fiber, otherwise NO.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><p><!-- begin discussion -->Perfomrs a <tt>[NDFiber currentFiber] == [NDFiber mainFiber]</tt>.
+<!-- end discussion --></p>
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDFiber/isMainFiber;  name=NDFiber::isMainFiber -->
+<a name="//apple_ref/occ/instm/NDFiber/isMainFiber"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="isMainFiber">isMainFiber </a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Returns a Boolean value that indicates whether the current fiber is the main fiber.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/BOOL //apple_ref/occ/tdef/BOOL //apple_ref/occ/tag/BOOL //apple_ref/occ/econst/BOOL //apple_ref/occ/struct/BOOL //apple_ref/occ/clconst/BOOL //apple_ref/occ/intf/BOOL" --><span class="type">BOOL</span><!-- /a -->)<span class="var">isMainFiber</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->YES if the current fiber is the main fiber, otherwise NO.
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><p><!-- begin discussion -->A <tt>NDFiber</tt> instance is created for you as soon an you call the class method mainFiber or when you start using any other fibers.
+<!-- end discussion --></p>
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDFiber/mainFiber;  name=NDFiber::mainFiber -->
+<a name="//apple_ref/occ/clm/NDFiber/mainFiber"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="mainFiber">mainFiber</a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Returns the <tt>NDFiber</tt> object representing the main fiber.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/NDFiber //apple_ref/occ/tdef/NDFiber //apple_ref/occ/tag/NDFiber //apple_ref/occ/econst/NDFiber //apple_ref/occ/struct/NDFiber //apple_ref/occ/clconst/NDFiber //apple_ref/occ/intf/NDFiber" --><span class="type">NDFiber</span><!-- /a --> <span class="type">*</span>)<span class="var">mainFiber</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->The <tt>NDFiber</tt> object representing the main fiber.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDFiber/name;  name=NDFiber::name -->
+<a name="//apple_ref/occ/instm/NDFiber/name"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="name">name</a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Returns the name of the receiver.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">name</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->The name of the receiver.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDFiber/setName:;  name=NDFiber::setName: -->
+<a name="//apple_ref/occ/instm/NDFiber/setName:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setName:">setName:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Sets the name of the receiver.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setName //apple_ref/occ/clm/setName //apple_ref/occ/intfcm/setName //apple_ref/occ/intfm/setName //apple_ref/occ/func/setName //apple_ref/occ/ftmplt/setName //apple_ref/occ/defn/setName //apple_ref/occ/macro/setName" --><span class="function">setName</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="var">name</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>name </code></dt><dd>The name for the receiver.</dd>
+</dl>
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDFiber/setStackSize:;  name=NDFiber::setStackSize: -->
+<a name="//apple_ref/occ/instm/NDFiber/setStackSize:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setStackSize:">setStackSize: </a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Sets the stack size of the receiver. This value will be rounded up to the nearest multiple of 4KB.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/setStackSize //apple_ref/occ/clm/setStackSize //apple_ref/occ/intfcm/setStackSize //apple_ref/occ/intfm/setStackSize //apple_ref/occ/func/setStackSize //apple_ref/occ/ftmplt/setStackSize //apple_ref/occ/defn/setStackSize //apple_ref/occ/macro/setStackSize" --><span class="function">setStackSize</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSUInteger //apple_ref/occ/tdef/NSUInteger //apple_ref/occ/tag/NSUInteger //apple_ref/occ/econst/NSUInteger //apple_ref/occ/struct/NSUInteger //apple_ref/occ/clconst/NSUInteger //apple_ref/occ/intf/NSUInteger" --><span class="type">NSUInteger</span><!-- /a -->)<span class="var">size</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<dl>
+<dt><code>size </code></dt><dd>The stack size for the receiver.</dd>
+</dl>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><p><!-- begin discussion -->You must call this method before starting your fiber. Setting the stack size after the fiber has started changes the attribute size (which is reflected by the stackSize method), but it does not affect the actual number of pages set aside for the fiber.
+<!-- end discussion --></p>
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/occ/instm/NDFiber/stackSize;  name=NDFiber::stackSize -->
+<a name="//apple_ref/occ/instm/NDFiber/stackSize"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="stackSize">stackSize</a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->eturns the stack size of the receiver.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSUInteger //apple_ref/occ/tdef/NSUInteger //apple_ref/occ/tag/NSUInteger //apple_ref/occ/econst/NSUInteger //apple_ref/occ/struct/NSUInteger //apple_ref/occ/clconst/NSUInteger //apple_ref/occ/intf/NSUInteger" --><span class="type">NSUInteger</span><!-- /a -->)<span class="var">stackSize</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->The stack size of the receiver.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/occ/clm/NDFiber/yieldToFiber:;  name=NDFiber::yieldToFiber: -->
+<a name="//apple_ref/occ/clm/NDFiber/yieldToFiber:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="yieldToFiber:">yieldToFiber: </a></h3>
+</td></tr></table><hr><p><!-- begin abstract -->Yields execution of current fiber to another fiber.
+<!-- end abstract --></p>
+<p><b>Author:</b> Nathan Day<br>
+</p><pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/econst/void //apple_ref/occ/struct/void //apple_ref/occ/clconst/void //apple_ref/occ/intf/void" --><span class="type">void</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/yieldToFiber //apple_ref/occ/clm/yieldToFiber //apple_ref/occ/intfcm/yieldToFiber //apple_ref/occ/intfm/yieldToFiber //apple_ref/occ/func/yieldToFiber //apple_ref/occ/ftmplt/yieldToFiber //apple_ref/occ/defn/yieldToFiber //apple_ref/occ/macro/yieldToFiber" --><span class="function">yieldToFiber</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NDFiber //apple_ref/occ/tdef/NDFiber //apple_ref/occ/tag/NDFiber //apple_ref/occ/econst/NDFiber //apple_ref/occ/struct/NDFiber //apple_ref/occ/clconst/NDFiber //apple_ref/occ/intf/NDFiber" --><span class="type">NDFiber</span><!-- /a --> <span class="type">*</span>)<span class="var">fiber</span>; </pre>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><p><!-- begin discussion -->sends a <tt>continue<tt> to the argument <tt><i>fiber</i></tt>. If the fiber <tt><i>fiber</i></tt> has finished then the exception <tt>NDFiberSucceedToFinishedFiberException</tt> is thrown
+<!-- end discussion --></p>
+<p></p><p>Last Updated: Sunday, March 08, 2009
+</p></body></html>

@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = D83927A20F661E26002C4E9C /* NDFiber */;
+		activeTarget = 8DD76F740486A8DE00D96B5E /* NDFiber */;
+		addToTargets = (
+			8DD76F740486A8DE00D96B5E /* NDFiber */,
+		);
+		codeSenseManager = D83927AB0F661E2E002C4E9C /* Code sense */;
+		executables = (
+			D83927A20F661E26002C4E9C /* NDFiber */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					300,
+					488,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					756,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					200,
+					50,
+					696,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 258350630;
+			PBXWorkspaceStateSaveDate = 258350630;
+		};
+		perUserProjectItems = {
+			D83927C70F661E91002C4E9C /* PBXTextBookmark */ = D83927C70F661E91002C4E9C /* PBXTextBookmark */;
+			D83927C80F661E91002C4E9C /* PBXTextBookmark */ = D83927C80F661E91002C4E9C /* PBXTextBookmark */;
+			D83927C90F661E91002C4E9C /* PBXTextBookmark */ = D83927C90F661E91002C4E9C /* PBXTextBookmark */;
+			D83927CA0F661E91002C4E9C /* PBXTextBookmark */ = D83927CA0F661E91002C4E9C /* PBXTextBookmark */;
+			D83927CB0F661E91002C4E9C /* PBXTextBookmark */ = D83927CB0F661E91002C4E9C /* PBXTextBookmark */;
+			D83927CC0F661E91002C4E9C /* PBXTextBookmark */ = D83927CC0F661E91002C4E9C /* PBXTextBookmark */;
+			D83927CD0F661E91002C4E9C /* PBXTextBookmark */ = D83927CD0F661E91002C4E9C /* PBXTextBookmark */;
+			D83927CE0F661E91002C4E9C /* PBXTextBookmark */ = D83927CE0F661E91002C4E9C /* PBXTextBookmark */;
+			D83927CF0F661E91002C4E9C /* PBXTextBookmark */ = D83927CF0F661E91002C4E9C /* PBXTextBookmark */;
+			D83927D00F661F72002C4E9C /* PBXTextBookmark */ = D83927D00F661F72002C4E9C /* PBXTextBookmark */;
+			D83927D10F661F72002C4E9C /* PBXTextBookmark */ = D83927D10F661F72002C4E9C /* PBXTextBookmark */;
+			D83927D20F661F72002C4E9C /* PBXDocBookmark */ = D83927D20F661F72002C4E9C /* PBXDocBookmark */;
+		};
+		sourceControlManager = D83927AA0F661E2E002C4E9C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8DD76F740486A8DE00D96B5E /* NDFiber */ = {
+		activeExec = 0;
+		executables = (
+			D83927A20F661E26002C4E9C /* NDFiber */,
+		);
+	};
+	D83927A20F661E26002C4E9C /* NDFiber */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = NDFiber;
+		sourceDirectories = (
+		);
+	};
+	D83927AA0F661E2E002C4E9C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	D83927AB0F661E2E002C4E9C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	D83927BE0F661E61002C4E9C /* Manual Page for pthread_getspecific.html */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {776, 606}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1618}";
+			sepNavWindowFrame = "{{15, 79}, {1340, 1094}}";
+		};
+	};
+	D83927C20F661E61002C4E9C /* Manual Page for ucontext.html */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {934, 841}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 3293}";
+		};
+	};
+	D83927C30F661E61002C4E9C /* pthread_key_create.html */ = {
+		isa = PBXFileReference;
+		explicitFileType = text.html.documentation;
+		fileEncoding = 4;
+		name = pthread_key_create.html;
+		path = /Users/nathan/Developer/Projects/Libraries/NDFiber/Notes/pthread_key_create.html;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {934, 3189}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 3447}";
+		};
+	};
+	D83927C40F661E61002C4E9C /* To Do.rtf */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {954, 841}}";
+			sepNavSelRange = "{89, 0}";
+			sepNavVisRect = "{{0, 0}, {954, 841}}";
+		};
+	};
+	D83927C50F661E61002C4E9C /* ucontext Broken on OS X 10.5 Leopard.rtf */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {954, 841}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {954, 841}}";
+		};
+	};
+	D83927C70F661E91002C4E9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D83927BE0F661E61002C4E9C /* Manual Page for pthread_getspecific.html */;
+		name = "Manual Page for pthread_getspecific.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1618;
+		vrLoc = 0;
+	};
+	D83927C80F661E91002C4E9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D83927C20F661E61002C4E9C /* Manual Page for ucontext.html */;
+		name = "Manual Page for ucontext.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1504;
+		vrLoc = 0;
+	};
+	D83927C90F661E91002C4E9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D83927C30F661E61002C4E9C /* pthread_key_create.html */;
+		name = "pthread_key_create.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1095;
+		vrLoc = 0;
+	};
+	D83927CA0F661E91002C4E9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D83927BE0F661E61002C4E9C /* Manual Page for pthread_getspecific.html */;
+		name = "Manual Page for pthread_getspecific.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1618;
+		vrLoc = 0;
+	};
+	D83927CB0F661E91002C4E9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D83927C30F661E61002C4E9C /* pthread_key_create.html */;
+		name = "pthread_key_create.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1095;
+		vrLoc = 0;
+	};
+	D83927CC0F661E91002C4E9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D83927C20F661E61002C4E9C /* Manual Page for ucontext.html */;
+		name = "Manual Page for ucontext.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1504;
+		vrLoc = 0;
+	};
+	D83927CD0F661E91002C4E9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D83927C30F661E61002C4E9C /* pthread_key_create.html */;
+		name = "pthread_key_create.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1095;
+		vrLoc = 0;
+	};
+	D83927CE0F661E91002C4E9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D83927C20F661E61002C4E9C /* Manual Page for ucontext.html */;
+		name = "Manual Page for ucontext.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1504;
+		vrLoc = 0;
+	};
+	D83927CF0F661E91002C4E9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D83927C30F661E61002C4E9C /* pthread_key_create.html */;
+		name = "pthread_key_create.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1095;
+		vrLoc = 0;
+	};
+	D83927D00F661F72002C4E9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D83927C30F661E61002C4E9C /* pthread_key_create.html */;
+		name = "pthread_key_create.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1095;
+		vrLoc = 0;
+	};
+	D83927D10F661F72002C4E9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D83927C30F661E61002C4E9C /* pthread_key_create.html */;
+		name = "pthread_key_create.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1095;
+		vrLoc = 0;
+	};
+	D83927D20F661F72002C4E9C /* PBXDocBookmark */ = {
+		isa = PBXDocBookmark;
+		fRef = D83927BE0F661E61002C4E9C /* Manual Page for pthread_getspecific.html */;
+		glyphRangeLength = 0;
+		glyphRangeLocation = 0;
+		name = "Manual Page for pthread_getspecific";
+	};
+}

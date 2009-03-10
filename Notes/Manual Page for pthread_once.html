@@ -1,0 +1,42 @@
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"><title>Manual Page for pthread_once</title><style type="text/css">.red {color: #CC0000} .hed {color: #000000; font-weight: bold; font-size: larger;}.blueBox{ background-color: #F1F5F9;padding: 6px 10px 6px 10px; border: 1px #ccc double; color: #000000; font-size: 14px}.indexLink {float:right; margin-top:4px;}</style></head><body><pre> <a href="man:PTHREAD_ONCE.3">PTHREAD_ONCE(3)</a>          BSD Library Functions Manual          <a href="man:PTHREAD_ONCE.3">PTHREAD_ONCE(3)</a>
+
+<span class="hed">NAME</span>
+     <span class="red">pthread_once</span> -- dynamic package initialization
+
+<span class="hed">SYNOPSIS</span>
+     <span class="red">#include</span> <span class="red">&lt;pthread.h&gt;</span>
+
+     pthread_once_t <u>once_</u><span class="red"></span><u>control</u> = PTHREAD_ONCE_INIT;
+
+     <u>int</u>
+     <span class="red">pthread_once</span>(<u>pthread_</u><span class="red"></span><u>once_</u><span class="red"></span><u>t</u> <u>*once_</u><span class="red"></span><u>control</u>, <u>void</u> <u>(*init_</u><span class="red"></span><u>routine)(void)</u>);
+
+<span class="hed">DESCRIPTION</span>
+     The first call to <span class="red">pthread_once</span>() by any thread in a process, with a given
+     <u>once_</u><span class="red"></span><u>control</u>, will call the <span class="red">init_routine</span>() with no arguments.  Subsequent
+     calls to <span class="red">pthread_once</span>() with the same <u>once_</u><span class="red"></span><u>control</u> will not call the
+     <span class="red">init_routine</span>().  On return from <span class="red">pthread_once</span>(), it is guaranteed that
+     <span class="red">init_routine</span>() has completed.  The <u>once_</u><span class="red"></span><u>control</u> parameter is used to
+     determine whether the associated initialization routine has been called.
+
+     The function <span class="red">pthread_once</span>() is not a cancellation point.  However, if
+     <span class="red">init_routine</span>() is a cancellation point and is cancelled, the effect on
+     <u>once_</u><span class="red"></span><u>control</u> <u>is</u> <u>as</u> <u>if</u> <span class="red">pthread_once</span>() was never called.
+
+     The constant <u>PTHREAD_</u><span class="red"></span><u>ONCE_</u><span class="red"></span><u>INIT</u> is defined by header &lt;<u>pthread.h</u>&gt;.
+
+     The behavior of <span class="red">pthread_once</span>() is undefined if <u>once_</u><span class="red"></span><u>control</u> has automatic
+     storage duration or is not initialized by <u>PTHREAD_</u><span class="red"></span><u>ONCE_</u><span class="red"></span><u>INIT</u>.
+
+<span class="hed">RETURN VALUES</span>
+     If successful, the <span class="red">pthread_once</span>() function will return zero.  Otherwise,
+     an error number will be returned to indicate the error.
+
+<span class="hed">ERRORS</span>
+     None.
+
+<span class="hed">STANDARDS</span>
+     <span class="red">pthread_once</span>() conforms to ISO/IEC 9945-1:1996 (``POSIX.1'').
+
+BSD                              April 4, 1996                             BSD
+</pre><div align="center" class="blueBox">Bwana Created by <a href="http://www.bruji.com/">Bruji</a></div></body></html> 

@@ -1,0 +1,42 @@
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"><title>Manual Page for ucontext</title><style type="text/css">.red {color: #CC0000} .hed {color: #000000; font-weight: bold; font-size: larger;}.blueBox{ background-color: #F1F5F9;padding: 6px 10px 6px 10px; border: 1px #ccc double; color: #000000; font-size: 14px}.indexLink {float:right; margin-top:4px;}</style></head><body><pre> <a href="man:UCONTEXT.3">UCONTEXT(3)</a>              BSD Library Functions Manual              <a href="man:UCONTEXT.3">UCONTEXT(3)</a>
+
+<span class="hed">NAME</span>
+     <span class="red">ucontext</span> -- user thread context
+
+<span class="hed">LIBRARY</span>
+     Standard C Library (libc, -lc)
+
+<span class="hed">SYNOPSIS</span>
+     <span class="red">#include</span> <span class="red">&lt;ucontext.h&gt;</span>
+
+<span class="hed">DESCRIPTION</span>
+     The <u>ucontext_</u><span class="red"></span><u>t</u> type is a structure type suitable for holding the context
+     for a user thread of execution.  A thread's context includes its stack,
+     saved registers, and list of blocked signals.
+
+     The <u>ucontext_</u><span class="red"></span><u>t</u> structure contains at least these fields:
+
+        <u>ucontext_</u><span class="red"></span><u>t</u> <u>*uc_</u><span class="red"></span><u>link</u>      context to assume when this one returns
+        <u>sigset_</u><span class="red"></span><u>t</u> <u>uc_</u><span class="red"></span><u>sigmask</u>      signals being blocked
+        <u>stack_</u><span class="red"></span><u>t</u> <u>uc_</u><span class="red"></span><u>stack</u>         stack area
+        <u>mcontext_</u><span class="red"></span><u>t</u> <u>uc_</u><span class="red"></span><u>mcontext</u>   saved registers
+
+     The <u>uc_</u><span class="red"></span><u>link</u> field points to the context to resume when this context's
+     entry point function returns.  If <u>uc_</u><span class="red"></span><u>link</u> is equal to NULL, then the
+     process exits when this context returns.
+
+     The <u>uc_</u><span class="red"></span><u>mcontext</u> field is machine-dependent and should be treated as
+     opaque by portable applications.
+
+     The following functions are defined to manipulate <u>ucontext_</u><span class="red"></span><u>t</u> structures:
+
+        <u>int</u> <span class="red">getcontext</span>(<u>ucontext_</u><span class="red"></span><u>t</u> <u>*</u>);
+        <u>int</u> <span class="red">setcontext</span>(<u>const</u> <u>ucontext_</u><span class="red"></span><u>t</u> <u>*</u>);
+        <u>void</u> <span class="red">makecontext</span>(<u>ucontext_</u><span class="red"></span><u>t</u> <u>*</u>, <u>void</u> (<u>*</u>)(<u>void</u>), <u>int</u>, <u>...</u>);
+        <u>int</u> <span class="red">swapcontext</span>(<u>ucontext_</u><span class="red"></span><u>t</u> <u>*</u>, <u>const</u> <u>ucontext_</u><span class="red"></span><u>t</u> <u>*</u>);
+
+<span class="hed">SEE ALSO</span>
+     <a href="man:sigaltstack.2">sigaltstack(2)</a>, <a href="man:getcontext.3">getcontext(3)</a>, <a href="man:makecontext.3">makecontext(3)</a>
+
+BSD                           September 10, 2002                           BSD
+</pre><div align="center" class="blueBox">Bwana Created by <a href="http://www.bruji.com/">Bruji</a></div></body></html> 

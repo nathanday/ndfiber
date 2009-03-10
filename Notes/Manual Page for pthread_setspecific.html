@@ -1,0 +1,45 @@
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"><title>Manual Page for pthread_setspecific</title><style type="text/css">.red {color: #CC0000} .hed {color: #000000; font-weight: bold; font-size: larger;}.blueBox{ background-color: #F1F5F9;padding: 6px 10px 6px 10px; border: 1px #ccc double; color: #000000; font-size: 14px}.indexLink {float:right; margin-top:4px;}</style></head><body><pre> <a href="man:PTHREAD_SETSPECIFIC.3">PTHREAD_SETSPECIFIC(3)</a>   BSD Library Functions Manual   <a href="man:PTHREAD_SETSPECIFIC.3">PTHREAD_SETSPECIFIC(3)</a>
+
+<span class="hed">NAME</span>
+     <span class="red">pthread_setspecific</span> -- set a thread-specific data value
+
+<span class="hed">SYNOPSIS</span>
+     <span class="red">#include</span> <span class="red">&lt;pthread.h&gt;</span>
+
+     <u>int</u>
+     <span class="red">pthread_setspecific</span>(<u>pthread_</u><span class="red"></span><u>key_</u><span class="red"></span><u>t</u> <u>key</u>, <u>const</u> <u>void</u> <u>*value</u>);
+
+<span class="hed">DESCRIPTION</span>
+     The <span class="red">pthread_setspecific</span>() function associates a thread-specific value
+     with a <u>key</u> obtained via a previous call to <span class="red">pthread_key_create</span>().  Differ-
+     ent threads may bind different values to the same key.  These values are
+     typically pointers to blocks of dynamically allocated memory that have
+     been reserved for use by the calling thread.
+
+     The effect of calling <span class="red">pthread_setspecific</span>() with a key value not obtained
+     from <span class="red">pthread_key_create</span>(), or after <u>key</u> has been deleted with
+     <span class="red">pthread_key_delete</span>(), is undefined.
+
+     <span class="red">pthread_setspecific</span>() may be called from a thread-specific data destruc-
+     tor function; however, this may result in lost storage or infinite loops.
+
+<span class="hed">RETURN VALUES</span>
+     If successful,  the <span class="red">pthread_setspecific</span>() function will return zero.
+     Otherwise, an error number will be returned to indicate the error.
+
+<span class="hed">ERRORS</span>
+     <span class="red">pthread_setspecific</span>() will fail if:
+
+     [EINVAL]           The <u>key</u> value is invalid.
+
+     [ENOMEM]           Insufficient memory exists to associate the value with
+                        the <u>key</u>.
+
+<span class="hed">SEE ALSO</span>
+     <a href="man:pthread_getspecific.3">pthread_getspecific(3)</a>, <a href="man:pthread_key_create.3">pthread_key_create(3)</a>, <a href="man:pthread_key_delete.3">pthread_key_delete(3)</a>
+
+<span class="hed">STANDARDS</span>
+     <span class="red">pthread_setspecific</span>() conforms to ISO/IEC 9945-1:1996 (``POSIX.1'').
+
+BSD                              April 4, 1996                             BSD
+</pre><div align="center" class="blueBox">Bwana Created by <a href="http://www.bruji.com/">Bruji</a></div></body></html> 

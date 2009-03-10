@@ -1,0 +1,60 @@
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"><title>Manual Page for pthread_key_create</title><style type="text/css">.red {color: #CC0000} .hed {color: #000000; font-weight: bold; font-size: larger;}.blueBox{ background-color: #F1F5F9;padding: 6px 10px 6px 10px; border: 1px #ccc double; color: #000000; font-size: 14px}.indexLink {float:right; margin-top:4px;}</style></head><body><pre> <a href="man:PTHREAD_KEY_CREATE.3">PTHREAD_KEY_CREATE(3)</a>    BSD Library Functions Manual    <a href="man:PTHREAD_KEY_CREATE.3">PTHREAD_KEY_CREATE(3)</a>
+
+<span class="hed">NAME</span>
+     <span class="red">pthread_key_create</span> -- thread-specific data key creation
+
+<span class="hed">SYNOPSIS</span>
+     <span class="red">#include</span> <span class="red">&lt;pthread.h&gt;</span>
+
+     <u>int</u>
+     <span class="red">pthread_key_create</span>(<u>pthread_</u><span class="red"></span><u>key_</u><span class="red"></span><u>t</u> <u>*key</u>, <u>void</u> <u>(*destructor)(void</u> <u>*)</u>);
+
+<span class="hed">DESCRIPTION</span>
+     The <span class="red">pthread_key_create</span>() function creates a thread-specific data key that
+     is visible to all threads in the process.  Key values provided by
+     <span class="red">pthread_key_create</span>() are opaque objects, used to locate thread-specific
+     data.  Although the same key value may be used by different threads, the
+     values bound to the key by <span class="red">pthread_setspecific</span>() are maintained on a per-
+     thread basis and persist for the life of the calling thread.
+
+     Upon key creation, the value NULL is associated with the new key in all
+     active threads.  Upon thread creation, the value NULL is associated with
+     all defined keys in the new thread.
+
+     An optional destructor function may be associated with each key value.
+     At thread exit, if a key value has a non-NULL destructor pointer, and the
+     thread has a non-NULL value associated with the key, the function pointed
+     to is called with the current associated value as its sole argument.  The
+     order of destructor calls is unspecified if more than one destructor
+     exists for a thread when it exits.
+
+     If, after all the destructors have been called for all non-NULL values
+     with associated destructors, there are still some non-NULL values with
+     associated destructors, then the process is repeated.  If, after at least
+     [PTHREAD_DESTRUCTOR_ITERATIONS] iterations of destructor calls for out-
+     standing non-NULL values, there are still some non-NULL values with asso-
+     ciated destructors, the implementation stops calling destructors.
+
+<span class="hed">RETURN VALUES</span>
+     If successful, the <span class="red">pthread_key_create</span>() function will store the newly
+     created key value at the location specified by <u>key</u> and returns zero.
+     Otherwise, an error number will be returned to indicate the error.
+
+<span class="hed">ERRORS</span>
+     <span class="red">pthread_key_create</span>() will fail if:
+
+     [EAGAIN]           The system lacked the necessary resources to create
+                        another thread-specific data key, or the system-
+                        imposed limit on the total number of keys per process
+                        [PTHREAD_KEYS_MAX] would be exceeded.
+
+     [ENOMEM]           Insufficient memory exists to create the key.
+
+<span class="hed">SEE ALSO</span>
+     <a href="man:pthread_getspecific.3">pthread_getspecific(3)</a>, <a href="man:pthread_key_delete.3">pthread_key_delete(3)</a>, <a href="man:pthread_setspecific.3">pthread_setspecific(3)</a>
+
+<span class="hed">STANDARDS</span>
+     <span class="red">pthread_key_create</span>() conforms to ISO/IEC 9945-1:1996 (``POSIX.1'').
+
+BSD                              April 4, 1996                             BSD
+</pre><div align="center" class="blueBox">Bwana Created by <a href="http://www.bruji.com/">Bruji</a></div></body></html> 
