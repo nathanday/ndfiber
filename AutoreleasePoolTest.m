@@ -22,11 +22,31 @@
 
 @end
 
+TestClass	** activInstances = NULL;
+int			bufferSize = 0,
+			numberOfInstances = 0;
+
+
 
 int main (int argc, const char * argv[])
 {
+	int		theUnreleaseObjectCount = 0;
     NSAutoreleasePool	* pool = [[NSAutoreleasePool alloc] init];
 	[TestClass methodA:[NDFiber fiberWithTarget:[TestClass class] selector:@selector(methodB:) object:[NDFiber mainFiber]]];
+	
+	for( int i = 0; i < numberOfInstances && activInstances[i] != nil; i++ )
+	{
+		if( activInstances[i] != nil )
+		{
+			theUnreleaseObjectCount++;
+			NSLog( @"Failed to dealloc %@", activInstances[i] );
+		}
+	}
+
+	if( theUnreleaseObjectCount == 0 )
+		NSLog( @"\nNo unreleased objects" );
+	else
+		NSLog( @"\nNumber of unreleased objects %d", theUnreleaseObjectCount );
 	[pool drain];
 }
 
@@ -40,7 +60,17 @@ int main (int argc, const char * argv[])
 - (id)initWithName:(NSString*)aName
 {
 	if( (self = [self init]) != nil )
+	{
 		name = [aName retain];
+		if( numberOfInstances >= bufferSize )
+		{
+			bufferSize += 32;
+			activInstances = realloc( activInstances, bufferSize * sizeof(NDFiber*) );
+			activInstances[numberOfInstances] = self;
+			numberOfInstances++;
+		}
+			
+	}
 	return self;
 }
 
@@ -58,6 +88,13 @@ int main (int argc, const char * argv[])
 - (void)dealloc
 {
 	NSLog( @"Deallocating %@ in fiber %@", self, [[NDFiber currentFiber] name] );
+	for( int i = 0; i < numberOfInstances && activInstances[i] != nil; i++ )
+	{
+		if( activInstances[i] == self )
+		{
+			activInstances[i] = nil;
+		}
+	}
 	[super dealloc];
 }
 
