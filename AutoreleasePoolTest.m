@@ -66,10 +66,9 @@ int main (int argc, const char * argv[])
 		{
 			bufferSize += 32;
 			activInstances = realloc( activInstances, bufferSize * sizeof(NDFiber*) );
-			activInstances[numberOfInstances] = self;
-			numberOfInstances++;
 		}
-			
+		activInstances[numberOfInstances] = self;
+		numberOfInstances++;
 	}
 	return self;
 }
@@ -87,14 +86,17 @@ int main (int argc, const char * argv[])
 
 - (void)dealloc
 {
+	BOOL		theFoundInstance = NO;
 	NSLog( @"Deallocating %@ in fiber %@", self, [[NDFiber currentFiber] name] );
-	for( int i = 0; i < numberOfInstances && activInstances[i] != nil; i++ )
+	for( int i = 0; i < numberOfInstances && theFoundInstance == NO; i++ )
 	{
 		if( activInstances[i] == self )
 		{
 			activInstances[i] = nil;
+			theFoundInstance = YES;
 		}
 	}
+	NSAssert1( theFoundInstance, @"Failed to find instance %@ to deallocate", self );
 	[super dealloc];
 }
 
