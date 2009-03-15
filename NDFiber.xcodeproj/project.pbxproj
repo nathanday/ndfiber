@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8DD76F770486A8DE00D96B5E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
-		8DD76F790486A8DE00D96B5E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */; };
+		D8953EA30F6CE81500C98B7E /* NDFiber.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4171E0F6CCCB200DF38DA /* NDFiber.m */; };
+		D8E4171A0F6CCC9300DF38DA /* NDFiberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E417190F6CCC9300DF38DA /* NDFiberTest.m */; };
+		D8E4171F0F6CCCB200DF38DA /* NDFiber.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4171E0F6CCCB200DF38DA /* NDFiber.m */; };
+		D8E417200F6CCCBB00DF38DA /* NDFiber.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4171E0F6CCCB200DF38DA /* NDFiber.m */; };
+		D8E417560F6CCD0400DF38DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E417550F6CCD0400DF38DA /* Foundation.framework */; };
+		D8E417570F6CCD0400DF38DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E417550F6CCD0400DF38DA /* Foundation.framework */; };
+		D8E417E50F6CCD7A00DF38DA /* ExceptionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E417E30F6CCD7A00DF38DA /* ExceptionsTest.m */; };
+		D8E418100F6CD31400DF38DA /* AutoreleasePoolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4180F0F6CD31400DF38DA /* AutoreleasePoolTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,8 +30,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		08FB7796FE84155DC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		8DD76F7E0486A8DE00D96B5E /* NDFiber */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NDFiber; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83927B00F661E61002C4E9C /* CompositePage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = CompositePage.html; sourceTree = "<group>"; };
 		D83927B10F661E61002C4E9C /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = index.html; sourceTree = "<group>"; };
@@ -37,7 +41,6 @@
 		D83927B90F661E61002C4E9C /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = index.html; sourceTree = "<group>"; };
 		D83927BA0F661E61002C4E9C /* NDFiber.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = NDFiber.html; sourceTree = "<group>"; };
 		D83927BB0F661E61002C4E9C /* toc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = toc.html; sourceTree = "<group>"; };
-		D83927BC0F661E61002C4E9C /* NDFiber.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = NDFiber.html; sourceTree = "<group>"; };
 		D83927BE0F661E61002C4E9C /* Manual Page for pthread_getspecific.html */ = {isa = PBXFileReference; explicitFileType = text.html.documentation; fileEncoding = 4; path = "Manual Page for pthread_getspecific.html"; sourceTree = "<group>"; };
 		D83927BF0F661E61002C4E9C /* Manual Page for pthread_key_create.html */ = {isa = PBXFileReference; explicitFileType = text.html.documentation; fileEncoding = 4; path = "Manual Page for pthread_key_create.html"; sourceTree = "<group>"; };
 		D83927C00F661E61002C4E9C /* Manual Page for pthread_once.html */ = {isa = PBXFileReference; explicitFileType = text.html.documentation; fileEncoding = 4; path = "Manual Page for pthread_once.html"; sourceTree = "<group>"; };
@@ -45,6 +48,14 @@
 		D83927C20F661E61002C4E9C /* Manual Page for ucontext.html */ = {isa = PBXFileReference; explicitFileType = text.html.documentation; fileEncoding = 4; path = "Manual Page for ucontext.html"; sourceTree = "<group>"; };
 		D83927C40F661E61002C4E9C /* To Do.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "To Do.rtf"; sourceTree = "<group>"; };
 		D83927C50F661E61002C4E9C /* ucontext Broken on OS X 10.5 Leopard.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "ucontext Broken on OS X 10.5 Leopard.rtf"; sourceTree = "<group>"; };
+		D870DAB50F6CCB0A00E3A0C3 /* ExceptionTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExceptionTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E417190F6CCC9300DF38DA /* NDFiberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDFiberTest.m; sourceTree = "<group>"; };
+		D8E4171D0F6CCCB200DF38DA /* NDFiber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDFiber.h; sourceTree = "<group>"; };
+		D8E4171E0F6CCCB200DF38DA /* NDFiber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDFiber.m; sourceTree = "<group>"; };
+		D8E417550F6CCD0400DF38DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		D8E417E30F6CCD7A00DF38DA /* ExceptionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExceptionsTest.m; sourceTree = "<group>"; };
+		D8E418030F6CD29B00DF38DA /* AutoreleasePoolTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AutoreleasePoolTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E4180F0F6CD31400DF38DA /* AutoreleasePoolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoreleasePoolTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +63,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DD76F790486A8DE00D96B5E /* CoreFoundation.framework in Frameworks */,
+				D8E417560F6CCD0400DF38DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D870DAB30F6CCB0A00E3A0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E417570F6CCD0400DF38DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8E418010F6CD29B00DF38DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				08FB7795FE84155DC02AAC07 /* Source */,
+				D8E4171C0F6CCCB200DF38DA /* Classes */,
 				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
 				19C28FBDFE9D53C911CA2CBB /* Products */,
 				D83927AC0F661E61002C4E9C /* Documentation */,
@@ -74,7 +101,9 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				08FB7796FE84155DC02AAC07 /* main.c */,
+				D8E417190F6CCC9300DF38DA /* NDFiberTest.m */,
+				D8E417E30F6CCD7A00DF38DA /* ExceptionsTest.m */,
+				D8E4180F0F6CD31400DF38DA /* AutoreleasePoolTest.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -82,7 +111,7 @@
 		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */,
+				D8E417550F6CCD0400DF38DA /* Foundation.framework */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -91,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				8DD76F7E0486A8DE00D96B5E /* NDFiber */,
+				D870DAB50F6CCB0A00E3A0C3 /* ExceptionTest */,
+				D8E418030F6CD29B00DF38DA /* AutoreleasePoolTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				D83927AD0F661E61002C4E9C /* NDFiber */,
-				D83927BC0F661E61002C4E9C /* NDFiber.html */,
 			);
 			path = Documentation;
 			sourceTree = "<group>";
@@ -167,6 +197,15 @@
 			path = Notes;
 			sourceTree = "<group>";
 		};
+		D8E4171C0F6CCCB200DF38DA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D8E4171D0F6CCCB200DF38DA /* NDFiber.h */,
+				D8E4171E0F6CCCB200DF38DA /* NDFiber.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,6 +227,38 @@
 			productReference = 8DD76F7E0486A8DE00D96B5E /* NDFiber */;
 			productType = "com.apple.product-type.tool";
 		};
+		D870DAB40F6CCB0A00E3A0C3 /* ExceptionTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D870DAB90F6CCB2900E3A0C3 /* Build configuration list for PBXNativeTarget "ExceptionTest" */;
+			buildPhases = (
+				D870DAB20F6CCB0A00E3A0C3 /* Sources */,
+				D870DAB30F6CCB0A00E3A0C3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExceptionTest;
+			productName = NDFiberAndExceptions;
+			productReference = D870DAB50F6CCB0A00E3A0C3 /* ExceptionTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		D8E418020F6CD29B00DF38DA /* AutoreleasePoolTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8E418070F6CD2B900DF38DA /* Build configuration list for PBXNativeTarget "AutoreleasePoolTest" */;
+			buildPhases = (
+				D8E418000F6CD29B00DF38DA /* Sources */,
+				D8E418010F6CD29B00DF38DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoreleasePoolTest;
+			productName = AutoreleasePoolTest;
+			productReference = D8E418030F6CD29B00DF38DA /* AutoreleasePoolTest */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +272,8 @@
 			projectRoot = "";
 			targets = (
 				8DD76F740486A8DE00D96B5E /* NDFiber */,
+				D870DAB40F6CCB0A00E3A0C3 /* ExceptionTest */,
+				D8E418020F6CD29B00DF38DA /* AutoreleasePoolTest */,
 			);
 		};
 /* End PBXProject section */
@@ -210,7 +283,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DD76F770486A8DE00D96B5E /* main.c in Sources */,
+				D8E4171A0F6CCC9300DF38DA /* NDFiberTest.m in Sources */,
+				D8E4171F0F6CCCB200DF38DA /* NDFiber.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D870DAB20F6CCB0A00E3A0C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E417200F6CCCBB00DF38DA /* NDFiber.m in Sources */,
+				D8E417E50F6CCD7A00DF38DA /* ExceptionsTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8E418000F6CD29B00DF38DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E418100F6CD31400DF38DA /* AutoreleasePoolTest.m in Sources */,
+				D8953EA30F6CE81500C98B7E /* NDFiber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +360,99 @@
 			};
 			name = Release;
 		};
+		D870DAB70F6CCB0B00E3A0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_VERSION = "";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ExceptionTest;
+			};
+			name = Debug;
+		};
+		D870DAB80F6CCB0B00E3A0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = NDFiberAndExceptions;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		D8E418050F6CD29B00DF38DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = AutoreleasePoolTest;
+			};
+			name = Debug;
+		};
+		D8E418060F6CD29B00DF38DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = AutoreleasePoolTest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -285,6 +470,24 @@
 			buildConfigurations = (
 				1DEB924C08733DCA0010E9CD /* Debug */,
 				1DEB924D08733DCA0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D870DAB90F6CCB2900E3A0C3 /* Build configuration list for PBXNativeTarget "ExceptionTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D870DAB70F6CCB0B00E3A0C3 /* Debug */,
+				D870DAB80F6CCB0B00E3A0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8E418070F6CD2B900DF38DA /* Build configuration list for PBXNativeTarget "AutoreleasePoolTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8E418050F6CD29B00DF38DA /* Debug */,
+				D8E418060F6CD29B00DF38DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

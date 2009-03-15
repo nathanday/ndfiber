@@ -1,0 +1,42 @@
+Limitations
+-----------
+
+¥ throwing exception: exceptions when thrown can unwrap the stack past any fiber yield, you can throw and catch exceptions before a yield. For example
+
+This will work
+try
+{
+	exception throwing code
+}
+catch(...)
+{
+}
+[NDFiber yieldToBiber:a]
+
+But this will NOT work
+try
+{
+	exception throwing code
+	[NDFiber yieldToBiber:a]
+}
+catch(...)
+{
+}
+
+¥ autorelease pools: autorelease pools work fine as long as you realise that after a yield any autoreleased object may have been released by a autorelease pool in the other fiber.
+
+For example this may fail
+
+	id	theObject = [obj autoreleasedObject];
+	[NDFiber yieldToBiber:a]
+	[theObject doSomething];		// object may longer be valid
+
+
+The fix is to retain the object an release it after the yield
+
+	id	theObject = [obj autoreleasedObject];
+	[theObject retain];
+	[NDFiber yieldToBiber:a]
+	[theObject doSomething];
+	[theObject release];
+
