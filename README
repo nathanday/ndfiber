@@ -24,7 +24,7 @@ catch(...)
 	...
 }
 
-¥ autorelease pools: autorelease pools work fine as long as you realise that after a yield any autoreleased object may have been released by an autorelease pool in the other fiber.
+â€¢ autorelease pools: autorelease pools work fine as long as you realise that after a yield any autoreleased object may have been released by an autorelease pool in the other fiber. You should also stick to only using autorlease pools in one fiber otherwise you can end up trying to release autorelease pools out of order, releasing autorelease pools out of order seems to work but it definitely goes against apples documentation on autorelease pools
 
 For example this can fail
 
